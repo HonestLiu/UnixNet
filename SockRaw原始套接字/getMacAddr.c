@@ -26,7 +26,7 @@ int SendTo(int sockFd, unsigned char *msg, int len, char *if_name) {
     }
     //定义struct sockaddr_ll接口体，并将上面获取的接口信息赋值给其内的
     struct sockaddr_ll sll;
-    memset(&sll, 0, sizeof(sll));
+    memset(&sll, 0, sizeof(sll));//清0
     sll.sll_ifindex = EthReq.ifr_ifindex;//给sll赋值
 
     //使用sendto发送数据
